@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0","numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dopplerml"
+version = "0.0.1"
+authors = [
+  { name="Vinay Jalumuru", email="vinay.jalumuru@gmail.com" },
+]
+description = "A Machine Learning Library"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Unicense",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+packages = [
+    "dopplerml",'dopplerml.models', 
+    'dopplerml.errors','dopplerml.optimizers',
+    'dopplerml.metrics', 'dopplerml.utils']
+
+[tool.black]
+exclude = '''
+/(
+    \.eggs         # exclude a few common directories in the
+  | \.git          # root of the project
+  | dist
+)/
+'''
+
+[project.urls]
+"Homepage" = "https://github.com/rogueninja9/doppler-ml"
+"Bug Tracker" = "https://github.com/rogueninja9/doppler-ml/issues"
